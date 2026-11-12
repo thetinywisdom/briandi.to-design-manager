@@ -250,21 +250,12 @@ li + li {
   overflow: hidden;
 }
 
-.plate pre {
-  margin: 0 auto;
-  width: max-content;
-  max-width: 100%;
-  color: var(--blue);
-  -webkit-text-fill-color: var(--blue);
-  font-family: "Cascadia Mono", ui-monospace, monospace;
-  font-size: clamp(6px, 2.15cqi, 12.5px);
-  font-weight: 400;
-  font-variant-emoji: text;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 0.92;
-  letter-spacing: 0;
-  white-space: pre;
+.plate canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
   opacity: 1;
 }
 
@@ -329,7 +320,7 @@ figcaption {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .fig.inview pre {
+  .fig.inview canvas {
     animation: fig-in 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }
@@ -342,7 +333,9 @@ figcaption {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 
-  .fig pre {
+  .plate canvas { cursor: auto; }
+
+  .fig canvas {
     opacity: 1 !important;
     animation: none !important;
     transition: none !important;
