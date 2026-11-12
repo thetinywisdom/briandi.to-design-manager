@@ -1,0 +1,100 @@
+/* Shared reset and the two inks. Each variation brings its own type and layout. */
+
+:root {
+  --paper: #f6f4ef;
+  --blue: #103dff;
+  --ink: #14245c;
+  --muted: #2c4088;
+  --wash: #e7ecff;
+  --mist: #f3f6ff;
+  --green: #0c6b34;
+  --green-line: #157a3c;
+  --line: rgba(16, 61, 255, 0.28);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, p, figure, ol, ul, dl, dd, blockquote { margin: 0; }
+
+img, svg { max-width: 100%; }
+
+::selection {
+  background: var(--wash);
+  color: var(--ink);
+}
+
+:focus { outline: none; }
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  margin: 0 0 1.25rem;
+  font-family: ui-monospace, "Cascadia Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.switch a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.switch a:hover,
+.switch a:focus-visible {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.switch a[aria-current="page"] { color: var(--green); }
+
+.skip {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 5;
+  transform: translateY(-160%);
+  padding: 0.35rem 0.55rem;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--blue);
+  text-decoration: none;
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.75rem;
+}
+
+.skip:focus { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
