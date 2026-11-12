@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How I lead — four variations</title>
+  <meta name="description" content="Four layouts of Brian’s How I lead sheet: editorial manual, assembly instructions, product manual, and blueprint.">
+  <link rel="stylesheet" href="base.css">
+  <style>
+    body {
+      font-family: Georgia, "Iowan Old Style", serif;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+    main {
+      width: min(40rem, 100%);
+      margin-inline: auto;
+      padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2rem) 4rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      letter-spacing: -0.03em;
+      color: var(--blue);
+      line-height: 1.05;
+      margin-bottom: 0.6rem;
+    }
+    .lede { max-width: 38ch; margin-bottom: 1.5rem; }
+    ol { padding: 0; list-style: none; display: grid; gap: 1rem; }
+    a.card {
+      display: block;
+      padding: 0.9rem 0 1rem;
+      border-top: 1px solid var(--line);
+      color: inherit;
+      text-decoration: none;
+    }
+    a.card:hover,
+    a.card:focus-visible { background: var(--wash); }
+    a.card strong {
+      display: block;
+      color: var(--blue);
+      font-size: 1.25rem;
+      margin-bottom: 0.2rem;
+    }
+    a.card span { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>How I lead</h1>
+    <p class="lede">Four layouts of the same sheet. The page at the root of the repo is unchanged.</p>
+    <ol>
+      <li><a class="card" href="a.html"><strong>A. Editorial manual</strong><span>Calm serif columns, hairline rules, a pixel title, and leader-line figures.</span></a></li>
+      <li><a class="card" href="b.html"><strong>B. Assembly sheet</strong><span>Huge lowercase grotesk, a lettered parts list, and a grid of short boxed steps.</span></a></li>
+      <li><a class="card" href="c.html"><strong>C. Product manual</strong><span>Condensed title block, a big sheet number, and ruled panels of one or two sentences.</span></a></li>
+      <li><a class="card" href="d.html"><strong>D. Blueprint</strong><span>Grid paper, notes around the figures, green leaders, and a title block.</span></a></li>
+    </ol>
+    <p class="lede" style="margin-top: 1.6rem;"><a href="fig2/index.html">Fig 2, four directions</a>. Animated studies of the two hands.</p>
+  </main>
+</body>
+</html>

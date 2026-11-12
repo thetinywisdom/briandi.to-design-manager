@@ -1,0 +1,218 @@
+/* C. Product manual. Condensed title, big sheet number, ruled panels. */
+
+body {
+  font-family: Barlow, "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.page {
+  container: page / inline-size;
+  width: min(1000px, 100%);
+  margin-inline: auto;
+  padding: clamp(1.1rem, 4vw, 2.2rem) clamp(0.85rem, 3vw, 1.4rem) 4rem;
+}
+
+.lockup {
+  display: grid;
+  gap: 0.4rem 1.25rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.sheetno {
+  font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  font-weight: 700;
+  font-size: clamp(5rem, 22vw, 8.5rem);
+  line-height: 0.78;
+  letter-spacing: -0.04em;
+  color: var(--blue);
+}
+
+.sheetno span {
+  display: block;
+  font-family: Barlow, sans-serif;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+h1 {
+  font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.sub {
+  margin-top: 0.35rem;
+  max-width: 36ch;
+  color: var(--muted);
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.spec div {
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+
+.spec dt {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.spec dd { margin: 0.1rem 0 0; }
+
+.hero { margin: 1.1rem 0 0.2rem; }
+
+.sheet {
+  margin-top: 2.2rem;
+  padding-top: 0.3rem;
+  border-top: 2px solid var(--blue);
+  scroll-margin-top: 0.75rem;
+}
+
+.sheet header {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.8rem;
+  padding: 0.7rem 0 0.4rem;
+}
+
+.chap {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  line-height: 0.8;
+  color: var(--blue);
+}
+
+h2 {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.panels section {
+  min-width: 0;
+  padding: 0.75rem 0.85rem 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.n {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1;
+  color: var(--blue);
+  margin-bottom: 0.3rem;
+}
+
+.panels p:last-child { text-wrap: pretty; }
+
+.plate {
+  position: relative;
+  min-height: 12.5rem;
+  border: 1px solid var(--blue);
+  background: var(--mist);
+  overflow: hidden;
+}
+
+.fig-id {
+  position: absolute;
+  z-index: 2;
+  top: 0.5rem;
+  left: 0.6rem;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.art-slot {
+  position: absolute;
+  inset: 1.9rem 0.5rem 0.5rem;
+  border: 1px solid var(--line);
+  background: var(--wash);
+}
+
+.calls { position: absolute; inset: 0; pointer-events: none; }
+
+.call {
+  position: absolute;
+  color: var(--green);
+  border: 1px solid var(--green);
+  background: var(--paper);
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.05rem 0.3rem;
+}
+
+.c1 { top: 18%; right: 4%; }
+.c2 { top: 48%; left: 4%; }
+.c3 { bottom: 12%; left: 5%; }
+
+figure { margin-top: 0; }
+
+figcaption {
+  padding: 0.35rem 0.1rem 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@container page (min-width: 720px) {
+  .lockup { grid-template-columns: auto minmax(0, 1fr); }
+  .spec div { border-bottom: 0; border-inline-end: 1px solid var(--line); }
+  .spec div:last-child { border-inline-end: 0; }
+  .panels { grid-template-columns: 1fr 1fr; }
+  .panels section:nth-child(odd) { border-inline-end: 1px solid var(--line); }
+  .panels .wide { grid-column: 1 / -1; border-inline-end: 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sheetno { animation: rise 0.7s var(--ease) both; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}

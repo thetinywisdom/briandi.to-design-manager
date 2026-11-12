@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fig 2, four directions — How I lead</title>
+  <meta name="description" content="Four animated studies of two hands, almost touching. Halftone, contour stipple, characters, and a spark in the gap.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:wght@600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,450&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="fig2.css">
+</head>
+<body>
+  <a class="skip" href="#studies">Skip to the studies</a>
+  <main>
+    <p class="back"><a href="../index.html">Variations</a></p>
+    <h1>Fig 2. Two hands</h1>
+    <p class="lede">Four studies of the same pair, from Michelangelo’s Creation of Adam. The hands are level, and the fingertips almost meet. Move across a plate and the dots step aside. They spring back when you leave. On a touch screen, drag.</p>
+
+    <div id="studies">
+      <section class="study" id="halftone">
+        <h2><span>A.</span> Halftone</h2>
+        <p>A regular grid. The size of each dot follows the shading, as in a newspaper photograph.</p>
+        <div class="plate">
+          <canvas data-mode="halftone" role="img" aria-label="Halftone of two hands reaching toward each other, fingertips almost touching. The dots move away from the pointer and spring back."></canvas>
+        </div>
+      </section>
+
+      <section class="study" id="contour">
+        <h2><span>B.</span> Contour stipple</h2>
+        <p>Dots along the edges and the creases, with a light stipple in the shadows.</p>
+        <div class="plate">
+          <canvas data-mode="contour" role="img" aria-label="Contour stipple of two hands reaching toward each other, fingertips almost touching. The dots move away from the pointer and spring back."></canvas>
+        </div>
+      </section>
+
+      <section class="study" id="ascii">
+        <h2><span>C.</span> Character</h2>
+        <p>A density ramp, one monospace character to a cell. Darker skin uses a heavier mark.</p>
+        <div class="plate">
+          <canvas data-mode="ascii" role="img" aria-label="Character study of two hands reaching toward each other, fingertips almost touching. The characters move away from the pointer and spring back."></canvas>
+        </div>
+      </section>
+
+      <section class="study" id="depth">
+        <h2><span>D.</span> Two-tone depth</h2>
+        <p>Each hand is its own field of dots. A small spark sits in the gap, and the hands lean toward it.</p>
+        <div class="plate">
+          <canvas id="figc-d" data-field="hands" data-src="hands.png" role="img" aria-label="Two hands as separate fields of dots, with a spark in the gap between the fingertips. The dots move away from the pointer, and the hands drift together when the pointer is near the gap."></canvas>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="../../dotfield.js"></script>
+  <script src="hands.js"></script>
+</body>
+</html>
