@@ -1,0 +1,137 @@
+/* Fig 2 studies. The plates sit on the same paper as the reading page. */
+
+:root {
+  --paper: #f6f4ef;
+  --ink: #1a1814;
+  --blue: #0e3cc9;
+  --green: #0c6b34;
+  --line: rgba(26, 24, 20, 0.16);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Newsreader, Georgia, "Iowan Old Style", Palatino, serif;
+  font-size: 18px;
+  line-height: 1.55;
+  font-optical-sizing: auto;
+}
+
+h1, h2, p { margin: 0; }
+
+::selection {
+  background: #d9e2ff;
+  color: var(--ink);
+}
+
+:focus { outline: none; }
+
+:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+
+a {
+  color: var(--blue);
+  text-underline-offset: 0.16em;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  transform: translateY(-160%);
+  padding: 0.4rem 0.7rem;
+  background: var(--paper);
+  color: var(--ink);
+  border: 2px solid var(--blue);
+  text-decoration: none;
+}
+
+.skip:focus { transform: none; }
+
+main {
+  width: min(640px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding: 2.75rem 0 4.5rem;
+}
+
+.back {
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  margin-top: 0.8rem;
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--blue);
+}
+
+.lede {
+  margin-top: 0.8rem;
+  max-width: 42rem;
+}
+
+.study {
+  margin-top: 2.4rem;
+}
+
+.study h2 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.study h2 span {
+  color: var(--green);
+  font-style: italic;
+  font-weight: 450;
+  margin-right: 0.35rem;
+}
+
+.study p {
+  margin: 0.25rem 0 0.7rem;
+  font-size: 18px;
+}
+
+.plate {
+  width: 100%;
+  aspect-ratio: 485 / 234;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.plate canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+@media (max-width: 400px) {
+  body { font-size: 17px; }
+  .study h2 { font-size: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .plate canvas { cursor: auto; }
+}
